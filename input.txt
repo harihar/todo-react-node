@@ -1,0 +1,6 @@
+connect UI to server
+check-into github
+connect to snap-ci
+deploy on heroku
+
+show error message on UI
