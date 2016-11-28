@@ -7,8 +7,7 @@ import {TodoAppContainer} from "./components/TodoApp";
 import axios from "axios";
 import axiosMiddleware from "redux-axios-middleware";
 
-const client = axios.create({ //all axios can be used, shown in axios documentation
-    baseURL: 'http://localhost:9090',
+const client = axios.create({
     responseType: 'json'
 });
 
@@ -28,14 +27,6 @@ let store = createStore(
         axiosMiddleware(client), //second parameter options can optionally contain onSuccess, onError, onComplete, successSuffix, errorSuffix
     )
 );
-
-// store.dispatch({
-//     type: 'SET_STATE',
-//     state: {
-//         todos: [],
-//         filter: 'all'
-//     }
-// });
 
 require('../../node_modules/todomvc-app-css/index.css');
 

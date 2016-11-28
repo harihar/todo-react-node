@@ -8,7 +8,8 @@
     "start": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "testui": "mocha --compilers js:babel-core/register --require ./web-app/test/setup.js './web-app/test/**/*.@(js|jsx)'",
-    "testui:watch": "npm run test -- --watch --watch-extensions jsx"
+    "testui:watch": "npm run test -- --watch --watch-extensions jsx",
+    "postinstall": "webpack --progress --colors"
   },
   "author": "hari",
   "license": "ISC",
