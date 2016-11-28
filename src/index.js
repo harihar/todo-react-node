@@ -25,7 +25,7 @@ app.use((err, req, res, next)=> {
         });
 });
 
-const port = process.env.PORT || 9095;
+const port = process.env.PORT || 9090;
 
 const listener = app.listen(port, (err, res) => {
     if (err) {

@@ -2,7 +2,18 @@ const express = require('express');
 const router = express.Router();
 const todoRepo = require('./TodoRepo');
 
-router.get('/todo', (req, res, next) => {
+//A test url to check if database connectivity is established
+router.get('/todo/test', (req, res, next) => {
+   todoRepo.test()
+       .then((result) => {
+           res.send(result);
+       })
+       .catch((err) => {
+           next(err);
+       });
+});
+
+router.get('/todo', function(req, res, next) {
     todoRepo.findAll()
         .then((result) => {
             const todoDTO = result.map(todo => mapToDTO(todo));

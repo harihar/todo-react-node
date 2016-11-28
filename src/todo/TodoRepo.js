@@ -1,5 +1,8 @@
 const db = require('../db-config');
 
+function test() {
+    return db.one("select 1+1");
+}
 function findAll() {
     return db.any("select * from todos");
 }
@@ -24,4 +27,4 @@ function deleteCompletedOnes() {
     return db.any("delete from todos where is_done=true returning id");
 }
 
-module.exports = {findAll, save, findById, update, deleteTodo, deleteCompletedOnes};
+module.exports = {findAll, save, findById, update, deleteTodo, deleteCompletedOnes, test};
