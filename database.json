@@ -1,0 +1,4 @@
+{
+  "dev": "postgres://junabazaar-master:password@localhost:5432/junabazaar-master",
+  "sql-file": true
+}
