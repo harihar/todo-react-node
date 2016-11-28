@@ -80,7 +80,6 @@ function cancelEditing(state, itemId) {
 }
 
 function setNewDataReceivedFromServer(state, data) {
-    console.log(data);
     data = data.map(todo => {
         return Object.assign({}, todo, {editing: false});
     });
